@@ -13,12 +13,14 @@
 </head>
 <body>
   <main class="shell">
-    <nav class="top-nav" aria-label="Site navigation">
-      <a href="https://github.com/chanhnghi/COS30045_Demo2_Exercise4.3-4.7_106216641">← Demonstration 2 repository</a>
-      <div class="section-links">
-        <a href="#bar-section">5.1 Bar</a>
-        <a href="#line-section">5.2 Line</a>
-        <a href="#donut-section">5.3 Donut</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <span class="site-brand">COS30045 / Demo 2</span>
+      <div class="site-nav-links">
+      <a href="../COS30045_Demo2_Exercise4.3-4.7_106216641/hub.html">Home</a>
+      <a href="../COS30045_Demo2_Exercise4.1_106216641/index.html">4.1</a>
+      <a href="../COS30045_Demo2_Exercise4.3-4.7_106216641/index.html">4.3–4.7</a>
+      <a href="index.html" aria-current="page">5</a>
+      <a href="../COS30045_Demo2_Exercise6_106216641/index.html">6</a>
       </div>
     </nav>
     <header class="page-header">
@@ -27,6 +29,7 @@
       <p>Three D3 charts share one page. Each chart loads its own CSV and has its own JavaScript file.</p>
     </header>
 
+    <div class="dashboard-grid">
     <section id="bar-section" class="chart-card" aria-labelledby="bar-title">
       <div class="card-heading">
         <span class="number">01</span>
@@ -66,6 +69,7 @@
       <p class="data-note">Based on 4,508 available TVs sold in Australia. Small &lt; 42 in, Medium 42–65 in, Large &gt; 65 in.</p>
       <p id="donut-status" class="status" role="status"></p>
     </section>
+    </div>
   </main>
 </body>
 </html>

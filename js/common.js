@@ -1,11 +1,10 @@
-const chartSize = {
-  width: 900,
-  height: 500,
-  margin: { top: 34, right: 42, bottom: 72, left: 88 }
+const chartSizes = {
+  bar: { width: 600, height: 430, margin: { top: 42, right: 20, bottom: 76, left: 112 } },
+  line: { width: 760, height: 510, margin: { top: 42, right: 24, bottom: 76, left: 94 } }
 };
 
-function createChartFrame(selector, description) {
-  const { width, height, margin } = chartSize;
+function createChartFrame(selector, description, kind) {
+  const { width, height, margin } = chartSizes[kind];
   const svg = d3.select(selector).append("svg")
     .attr("viewBox", `0 0 ${width} ${height}`)
     .attr("role", "img")

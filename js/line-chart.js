@@ -1,7 +1,8 @@
 function drawLineChart(data) {
   const { inner, innerWidth, innerHeight } = createChartFrame(
     "#line-chart",
-    "Line chart and scatter points showing Australian average spot electricity prices from 1998 to 2024"
+    "Line chart and scatter points showing Australian average spot electricity prices from 1998 to 2024",
+    "line"
   );
   const xScale = d3.scaleLinear()
     .domain(d3.extent(data, d => d.year))
@@ -22,7 +23,7 @@ function drawLineChart(data) {
     .attr("text-anchor", "middle").text("Year");
   inner.append("text").attr("class", "axis-label")
     .attr("transform", "rotate(-90)")
-    .attr("x", -innerHeight / 2).attr("y", -60)
+    .attr("x", -innerHeight / 2).attr("y", -66)
     .attr("text-anchor", "middle").text("Average price (AUD/MWh)");
 
   const lineGenerator = d3.line()

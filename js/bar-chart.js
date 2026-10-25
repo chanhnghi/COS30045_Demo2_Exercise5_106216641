@@ -1,7 +1,8 @@
 function drawBarChart(data) {
   const { inner, innerWidth, innerHeight } = createChartFrame(
     "#bar-chart",
-    "Vertical bar chart comparing mean annual energy use of 55-inch LCD, LED and OLED televisions"
+    "Vertical bar chart comparing mean annual energy use of 55-inch LCD, LED and OLED televisions",
+    "bar"
   );
   const xScale = d3.scaleBand()
     .domain(data.map(d => d.screenTech))
@@ -23,7 +24,7 @@ function drawBarChart(data) {
     .attr("text-anchor", "middle").text("Screen technology");
   inner.append("text").attr("class", "axis-label")
     .attr("transform", "rotate(-90)")
-    .attr("x", -innerHeight / 2).attr("y", -58)
+    .attr("x", -innerHeight / 2).attr("y", -78)
     .attr("text-anchor", "middle").text("Mean annual energy use (kWh)");
 
   inner.selectAll("rect.bar")
