@@ -10,7 +10,6 @@ function drawBarChart(data) {
     .padding(0.28);
   const yScale = d3.scaleLinear()
     .domain([0, d3.max(data, d => d.meanEnergyConsumption) * 1.18])
-    .nice()
     .range([innerHeight, 0]);
 
   inner.append("g").attr("class", "grid")
